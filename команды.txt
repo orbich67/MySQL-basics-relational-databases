@@ -1,0 +1,13 @@
+create database example;
+use example;
+create table users (id INT, name TEXT);
+
+команда в cmd:
+mysqldump -u root -p example > example.sql
+
+create database sample;
+use sample;
+source example.sql;
+
+команда в cmd:
+mysqldump -u root -p sample > sample.sql
