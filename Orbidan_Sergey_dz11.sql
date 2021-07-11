@@ -1,5 +1,4 @@
-				-- “Оптимизация запросов”
-
+							-- Оптимизация запросов
 -- Задача 1
 DROP TABLE IF EXISTS logs;
 CREATE TABLE logs (
@@ -41,15 +40,16 @@ BEGIN
 END //
 delimiter ;
 
-				-- “NoSQL”
--- Задача 1
+
+				-- NoSql
+-- задача 1
 -- все значения в коллекции уникальны
 SADD ipaddr '127.0.0.1' '127.0.0.2' '127.0.0.3' '127.0.0.4' '127.0.0.5'
 
--- список ip-адресов
+-- список адресов
 SMEMBERS ipaddr
 
--- количество ip-адресов
+-- количество адресов
 SCARD ipaddr
 
 -- Задача 2
@@ -69,4 +69,4 @@ db.products.insertMany([
 	{"name": "Gigabyte H310M S2H", "description": "Материнская плата Gigabyte H310M S2H, H310, Socket 1151-V2, DDR4, mATX", "price": "4790.00", "catalog_id": "Материнские платы", "created_at": new Date(), "updated_at": new Date()},
 	{"name": "MSI B250M GAMING PRO", "description": "Материнская плата MSI B250M GAMING PRO, B250, Socket 1151, DDR4, mATX", "price": "5060.00", "catalog_id": "Материнские платы", "created_at": new Date(), "updated_at": new Date()}])
 
-db.catalogs.insertMany([{"name": "Процессоры"}, {"name": "Материнские платы"}, {"name": "Видеокарты"}])
+db.catalogs.insertMany([{"name": "Процессоры"}, {"name": "Материнские платы"}, {"name": "Видеокарты"}, {"name": "Жесткие диски"}], {"name": "Оперативная память"}])
